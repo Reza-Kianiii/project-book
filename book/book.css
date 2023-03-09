@@ -1,0 +1,306 @@
+
+ @font-face{
+  font-family:'nazanin';
+  src: url('../fonts/NAZANIN.TTF')format('truetype')
+}
+
+@font-face {
+    font-family: Ascrada;
+    src: url(../fonts/Ascrada.ttf) format(truetype);
+}
+ 
+.Container_Text p{
+    font-family: 'Abyssinica SIL';font-size:18px;
+    font-weight: normal;
+}
+
+.Name_Book h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+ul a li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.Description small{
+    font-family: 'Abyssinica SIL';font-size: 15px;
+    font-weight: normal;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.root{
+    width: 100%;
+    
+}
+.Contaienr{
+    width: 40rem;
+    height: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-shrink: 1;
+    gap: 0.5rem;
+}
+.Container_Left {
+    width:10rem;
+    border: 1px solid black;
+    height: 100px;
+
+}
+.Container_Left ul a{
+    list-style-type: none;
+    text-decoration: none;
+   
+}
+.Container_Left ul a li {
+    text-decoration: none;
+    color: black;
+}
+
+.Container_Left ul {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Container_Left ul > a{
+    margin: 10px;
+}
+
+.Container_Right{
+    width: 30.5rem;
+   
+    height: 100px;
+}
+.Container_Right .Container_input input{
+    width: 100%;
+    padding: 8px 12px;
+}
+.Container_Right .Container_input{
+    position: relative;
+    
+} 
+.Container_Right .Container_input i{
+    position: absolute;
+    top: 8px;
+    right:5px;
+    font-size: 20px;
+
+
+    
+    
+}
+.Container_Right .Container_Text  {
+    text-align: center;
+    margin-top: 10px;
+}
+.Container_Right .Container_Text p{
+    margin: 10px;
+}
+.Container_Right .Section_Body_main {
+    width: 100%;
+    
+   
+}
+
+.Section_Body_main ul li {
+    list-style-type: none;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.Section_Body_main ul li a{
+ text-decoration: none;
+ color:  black;
+}
+@media only screen and (max-width:650px) {
+   
+    .Contaienr{
+        display: block;
+        width: 100%;
+        margin: 2rem;
+    }
+.Contaienr    main{
+        margin-top: 1rem;
+    }
+   
+ .Contaienr   main .Container_Right {
+        width: 90%;
+    }
+    aside .Container_Left{
+        
+        width: 90%;
+    }
+}
+.Section_Container_Book{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    position: relative;
+}
+
+
+.Section_Container_Book  .Setion_Photo_Book{
+    width: 30%;
+   
+}
+
+.Setion_Photo_Book img{
+    width: 100%;
+    height: 150px;
+}
+
+.Section_Container_Book .Setion_text_Book{
+    width: 65%;
+  
+    
+
+}
+.Container_Header_Text_Book .Name_Book{
+   
+    width:60%;
+}
+.Section_Container_Book .Setion_Btn_Book{
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.Section_Container_Book .Setion_Btn_Book button{
+    border-radius: 50%;
+    padding:5px;
+}
+
+.Contaner_Names{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Container_Header_Text_Book   .Description{
+    margin-top: 20px;
+}
+.Container_Header_Text_Book   .Description p{
+    color: black;
+    text-decoration:none;
+    list-style-type: none;
+    
+ 
+}
+
+
+/* .Setion_Btn_Book{
+    display: none;
+} */
+
+
+
+
+
+.Setion_Btn_Book  .Box_Btn.hidden{
+    display: none;
+} 
+/* .Setion_Btn_Book .Box_Btn{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+} */
+
+
+.Container_Left ul li:hover{
+    background-color: lightslategray;
+    transition:  background-color 2s;
+}
+
+.Container_Left ul a li.active{
+    background-color: lightslategray;
+    transition:  background-color 0.1ms;
+}
+
+.itemsquare:hover{
+    color: blue;
+}
+
+.fa-check-circle:hover{
+    color: orange;
+}
+ .fa-times-circle:hover{
+    color: red;
+}
+.Setion_Btn_Book .Contaienr_Btn {
+    display: flex;
+flex-direction: column;
+justify-content:space-around;
+align-items: center;
+height: 100%;
+}
+
+.Setion_Btn_Book .Contaienr_Btn.hidden {
+display: none;
+}
+.Btn_squ.hidden{
+    display: none;
+}
+
+/* .Setion_Btn_Book .Box_Btn.active{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+  
+  } */
+/* .Setion_Btn_Book  .Active{
+    display: block;
+} */
+
+/* 
+.alikone{
+
+    height: 20px;
+ 
+} */
+
+
+.Container_Star.hidden{
+    display: none;
+}
+
+.Container_Star  .Container_Span_star{
+    display: flex;
+    flex-wrap: nowrap;
+   color: #bfb1b1;
+    width: 90px;
+  overflow: hidden;
+}
+.Container_Star .Container_Span_star  span:hover{
+color: yellow;
+
+}
+
+
+.alert{
+    width: 15rem;
+    height: 30px;
+    border: 1px solid blue;
+    box-shadow: 0px 0px 5px red;
+    border-radius: 100px;
+    position: fixed;
+    top: 20px;
+    right:-18rem;
+    text-align: center;
+    transition: 0.5s;
+}
+.alert div{
+    font-size: 13px;
+    margin-top: 5px;
+}

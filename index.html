@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./loggin.css" />
+    <link rel="stylesheet" href="./book/font/css/webfonts/all.min.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="contianer_form">
+        <div class="contianer_btn">
+          <div class="btn"></div>
+          <button id="loggin"  class="toggle_btn">ورود</button>
+          <button id="regiestry" class="toggle_btn">ثبت نام</button>
+         
+        </div>
+        <div class="main_container_form">
+        <div class="contianer_form_loggin">
+          <input type="text" id="loginusername"  placeholder="Enter Username"/>
+          <input type="text"  id="loginpassword"  placeholder="Enter  Password"/>
+          <button id="btn_login" class="btn_form" onclick="Login22(event)">ورود</button>
+        </div>
+        <div class="contianer_form_registery">
+            <input type="text" id="username" placeholder="Enter  New Username"/>
+            <input type="text"  id="password" placeholder="Enter New Password"/>
+            <button class="btn_form" onclick="registry22()">ثبت نام</button>
+          </div>
+        </div>
+        </div>
+    </main>
+    <div  class="Container_Loading" >
+      <i class="fa fa-refresh fa-spin" style="font-size:50px"></i>
+    </div>
+    <script  src="./loggin.js"></script>
+  </body>
+</html>

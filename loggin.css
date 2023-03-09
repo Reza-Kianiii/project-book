@@ -1,0 +1,101 @@
+
+
+
+body{
+  width: 100%;
+  height: 100%;
+    background-image: url(../img/AmalgaTree.jpg);
+    background-position: center;
+    background-size: cover;
+   
+    position: absolute;
+   
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.contianer_form {
+  width: 17rem;
+  background-color: white;
+  height: 20rem;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0  0  10px 5px orange;;
+}
+.contianer_btn {
+    border-radius: 30px; 
+  width: 15rem;
+  margin: 3rem auto;
+  position: relative;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 7px  5px 5px red;
+}
+.toggle_btn {
+  width: 49%;
+  display: inline;
+  background-color: transparent;
+  margin: -2px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  position: relative;
+  }
+.btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient( to  right ,#ff105f,#ffad06);
+  width: 7.5rem;
+  height: 100%;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.contianer_form_loggin {
+  margin: auto;
+  width: 15rem;
+  position: relative;
+  left: 0px;
+  transition: 0.5s;
+}
+.contianer_form_registery{
+    margin: auto;
+  width: 15rem;
+  position: relative;
+  left: 280px;
+  top: -8.42rem;
+transition: 0.5s;
+}
+input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+.main_container_form {
+  position:  relative;
+display: inline;
+}
+.btn_form{
+    width: 15rem;
+    height: 2rem;
+    background: linear-gradient( to  right ,#ff105f,#ffad06);
+}
+
+.Container_Loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  display: none;
+}

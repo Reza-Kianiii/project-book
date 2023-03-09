@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="./font/css/webfonts/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+    <title>Document</title>
+  </head>
+  <body >
+    <div class="root">
+      <div class="Contaienr">
+          <aside>
+              <div   class="Container_Left">
+                  <ul>
+                    <a  href="">
+                        <li id="Reading" onclick="Manage_Tab(event)">
+                            Reading List
+                          </li>
+                    </a>
+                      
+                    <a  href="">
+                        <li  id="Discover" class="active" onclick="Manage_Tab(event)">
+                            Discover
+                        </li>
+                    </a>
+                 
+                  </ul>
+              </div>
+            </aside>
+         <main >
+             <div class="Container_Right">
+                 <div class="Section_top" >
+                     <div class="Container_input">
+                         <input type="text" placeholder="Search books" onkeyup="Manage_Search(event)">
+                        <i class="fa fa-search"></i>
+                     </div>
+                     <div class="Container_Text">
+                         <p>Welcome to the discover page.</p>
+                         <p>Here, let me load a few books for you...</p>
+                         <p>Here you go! Find more books with the search bar above.</p>
+                        </div>
+                 </div>
+                 <div class="Section_Body_main">
+                     <ul >
+<!--                          
+                         <li>
+                             <a href="" onclick=" Handel_Container_Book(event)">
+
+                                <div class="Section_Container_Book"  >
+                                    <div class="Setion_Photo_Book"><img src="./img/book(1).jpg" alt="photo"></div>
+                                    <div class="Setion_text_Book">
+                                        <div class="Container_Header_Text_Book">
+                                            <div class="Contaner_Names">
+                                                <div class="Name_Book">
+                                                    <h5>Harry Potter and the Goblet of Fire</h5>
+                                                </div>
+                                                <div class="Writer_Name">
+                                                    <div >J. K. Rowling</div>
+                                                    <small>Scholastic</small>
+                                                </div>
+                                            </div>
+                                            <div class="Description">
+                                                <small >
+                                                    Harry Potter is midway through his training as a wizard and his coming of age. Harry wants to get away from the pernicious Dursleys and go to the International Quidditch Cup. He wants to find out about the mysterious event that's sen b
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Setion_Btn_Book">
+                                        <button  onclick="Manage_Btn(event)"><i class="fas fa-plus-square   itemsquare "></i></button>
+                                        <div class="Contaienr_Btn hidden">
+                                            <button  onclick="Manage_Btn(event)"><i class="fas fa-check-circle   itemcheckcircle "></i></button>
+                                            <button  onclick="Manage_Btn(event)"><i class="fas fa-times-circle   itemtimescircle "></i></button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </a>
+                         </li> -->
+                     </ul>
+                 </div>
+
+             </div>
+         </main>
+      </div>
+    </div>
+
+    <div class="alert">
+        <div dir="rtl"></div>
+    </div>
+
+    <script  src="book.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
