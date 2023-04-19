@@ -115,6 +115,7 @@ let Discover = [
 ];
 
 window.onload = () => {
+
   GenerateElement(Discover);
 };
 
@@ -129,42 +130,71 @@ function Manage_Tab(event) {
   Manage_Page(event);
 }
 let Page;
-function Manage_Page(event) {
+let input;
+function Manage_Page(event ) {
+  console.log('reza')
   if (event.target.id == "Reading") {
+   console.log('mohsen kiani')
     GenerateElement(Reading_List_Array);
-
-    let Container_Btn_Reading = document.querySelectorAll(".Setion_Btn_Book > button");
     
+    let Container_Btn_Reading = document.querySelectorAll(".Setion_Btn_Book > button");
+     input=document.querySelectorAll('.Container_Right .Container_input');
+    input[0].classList.add('disable_input');
+   
     Array.from(Container_Btn_Reading).forEach((item,index) => {
      Set_ClassList(item.firstElementChild,deletebtn) 
     item.addEventListener('click',(e)=>{
-      Reading_List_Array.splice(index,1)
+      
+      Delete_Reading_List(index)
       e.target.closest('li').remove()
+      
 
     })
     });
   } else {
     GenerateElement(Discover);
+    input[0].classList.remove('disable_input')
   }
 }
 
 let Value_Search;
 let Filter_Search;
+let Page_Active;
 function Manage_Search(event) {
   event.preventDefault();
 
+  let Page_Active=  document.querySelectorAll('.Container_Left  > ul >a > li.active')
+  
   let Value_Search = event.target.value;
-  Filter_Search = Discover.filter((item) => {
-    if (item.name.toUpperCase().includes(Value_Search.toUpperCase())) {
-      return item;
-    }
-  });
-  if (Filter_Search) {
-    GenerateElement(Filter_Search);
-  } else {
-    GenerateElement(Discover);
+  if(Page_Active[0].id=='Discover'){
+    Search( Value_Search,Discover)
+  }
+  else if(Page_Active[0].id=='Reading'){
+    Search(Value_Search,Reading_List_Array)
   }
 }
+
+
+function Search(key,list){
+  
+  Filter_Search = list.filter((item) => {
+    if (item.name.toUpperCase().includes(key.toUpperCase())) {
+     return item.name
+    }
+  });
+  if(key){
+      GenerateElement(Filter_Search);
+
+  }
+  else{
+   GenerateElement(list)
+  }
+
+}
+
+
+
+
 
 function Handel_Container_Book(event) {
   event.preventDefault();
@@ -195,9 +225,10 @@ function Manage_Btn(e, indexitem, bookid) {
   } else if (
     Detect_Type_btn.className.includes("fas fa-times-circle   itemtimescircle ")
   ) {
+    
     Toggel_Btn_Show(e.target, indexitem);
     Delete_Reading_List(bookid);
-    Alert("این کتاب ,از کتاب خواننده شده ها حذف شد");
+   
   }
 }
 
@@ -233,9 +264,9 @@ function Alert_Hidden() {
 }
 
 function Toggel_Btn_Hidden(target, Container_Btn) {
-  console.log(Container_Btn)
   
- console.log(target.closest("button").style.display = "none") ;
+  
+ target.closest("button").style.display = "none" ;
 
 Container_Btn.classList.remove("hidden");
 }
@@ -244,6 +275,7 @@ let Container_btn_Index;
 let Element_Current_to_Container;
 
 function Toggel_Btn_Show(target, indexitem) {
+  
   target.closest("div").classList.add("hidden");
   Container_btn_Index =
     document.querySelectorAll(".Setion_Btn_Book")[indexitem];
@@ -255,12 +287,14 @@ function Toggel_Btn_Show(target, indexitem) {
 let Index_Book_id;
 
 function Delete_Reading_List(bookid) {
+
   Index_Book_id = Reading_List_Array.findIndex((item) => {
     if (item.id === bookid) {
       return item;
     }
   });
   Reading_List_Array.splice(Index_Book_id, 1);
+  Alert("این کتاب ,از کتاب خواننده شده ها حذف شد");
 }
 
 function Set_ClassList(Element, itemclass) {
@@ -283,17 +317,18 @@ function Show_Star(indexitem, id) {
     ".Container_Star .Container_Span_star"
   );
  
- 
+
+
+
  Find_Index_Star=indexitem
-  console.log(Find_Index_Star)
   let Child_star = All_Container_Span_Star[Find_Index_Star].children;
   
   Number_stars = Stars[Find_Index_Star].rate;
-  console.log(Number_stars);
+  
   for (let i = 0; i < Number_stars; i++) {
-    console.log((Child_star[i].style.color = "yellow"));
+(Child_star[i].style.color = "yellow");
   }
-  console.log(all_Container_Star[indexitem].classList.toggle("hidden"));
+ all_Container_Star[indexitem].classList.toggle("hidden");
 }
 
 let Span_Star;
@@ -344,7 +379,7 @@ function Set_Star(event,id){
       return item
     }
   })
-  console.log(Stars[New_Star_Color].rate=New_Number_star)
+  Stars[New_Star_Color].rate=New_Number_star
 
 }
 
